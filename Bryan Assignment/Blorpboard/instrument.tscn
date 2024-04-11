@@ -1,12 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://bbes035id5wep"]
+[gd_scene load_steps=10 format=3 uid="uid://bbes035id5wep"]
 
-[ext_resource type="Theme" uid="uid://davxw4ylwekln" path="res://My_theme.tres" id="1_mwcan"]
-[ext_resource type="AudioStream" uid="uid://bel1kobq64jq6" path="res://Drum_Loop_1.wav" id="2_pqg3e"]
-[ext_resource type="Script" path="res://PlayLoop1.gd" id="3_8y6u2"]
-[ext_resource type="AudioStream" uid="uid://co37hrdk1pq4m" path="res://Drum_Loop_2.wav" id="4_kc854"]
-[ext_resource type="Script" path="res://PlayLoop2.gd" id="5_wxqyl"]
-[ext_resource type="AudioStream" uid="uid://caccyqwcqfnab" path="res://Drum_Loop_3.wav" id="6_s20bs"]
-[ext_resource type="Script" path="res://PlayLoop3.gd" id="7_ps7pr"]
+[ext_resource type="Theme" uid="uid://davxw4ylwekln" path="res://Themes/Gork_theme.tres" id="1_mwcan"]
+[ext_resource type="AudioStream" uid="uid://bel1kobq64jq6" path="res://Sounds/Drum_Loop_1.wav" id="2_pqg3e"]
+[ext_resource type="Script" path="res://Scripts/PlayLoop1.gd" id="3_8y6u2"]
+[ext_resource type="AudioStream" uid="uid://co37hrdk1pq4m" path="res://Sounds/Drum_Loop_2.wav" id="4_kc854"]
+[ext_resource type="Script" path="res://Scripts/PlayLoop2.gd" id="5_wxqyl"]
+[ext_resource type="AudioStream" uid="uid://caccyqwcqfnab" path="res://Sounds/Drum_Loop_3.wav" id="6_s20bs"]
+[ext_resource type="Script" path="res://Scripts/PlayLoop3.gd" id="7_ps7pr"]
+[ext_resource type="Script" path="res://Scripts/Pitch_correction.gd" id="8_1rwhy"]
 
 [sub_resource type="GDScript" id="GDScript_ex8j1"]
 
@@ -21,55 +22,83 @@ size_flags_horizontal = 0
 size_flags_vertical = 0
 metadata/_edit_use_anchors_ = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
-layout_mode = 1
-offset_right = 238.0
-offset_bottom = 647.0
+[node name="Gork Section" type="PanelContainer" parent="Control"]
+layout_mode = 0
+offset_right = 447.0
+offset_bottom = 259.0
 theme = ExtResource("1_mwcan")
 
-[node name="Drum Loop 1 Button" type="Button" parent="Control/VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Gork Section"]
+layout_mode = 2
+theme = ExtResource("1_mwcan")
+
+[node name="Drum Loop 1 Button" type="Button" parent="Control/Gork Section/VBoxContainer"]
 layout_mode = 2
 toggle_mode = true
 text = "Drums 1"
 script = SubResource("GDScript_ex8j1")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control/VBoxContainer/Drum Loop 1 Button"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control/Gork Section/VBoxContainer/Drum Loop 1 Button"]
 stream = ExtResource("2_pqg3e")
+bus = &"Gork"
 script = ExtResource("3_8y6u2")
 
-[node name="Drum Loop 2 Button" type="Button" parent="Control/VBoxContainer"]
+[node name="Drum Loop 2 Button" type="Button" parent="Control/Gork Section/VBoxContainer"]
 layout_mode = 2
 toggle_mode = true
 text = "Drums 2"
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control/VBoxContainer/Drum Loop 2 Button"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control/Gork Section/VBoxContainer/Drum Loop 2 Button"]
 stream = ExtResource("4_kc854")
+bus = &"Gork"
 script = ExtResource("5_wxqyl")
 
-[node name="Drum Loop 3 Button" type="Button" parent="Control/VBoxContainer"]
+[node name="Drum Loop 3 Button" type="Button" parent="Control/Gork Section/VBoxContainer"]
 layout_mode = 2
 toggle_mode = true
 text = "Drums 3"
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control/VBoxContainer/Drum Loop 3 Button"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control/Gork Section/VBoxContainer/Drum Loop 3 Button"]
 stream = ExtResource("6_s20bs")
+bus = &"Gork"
 script = ExtResource("7_ps7pr")
 
-[node name="HSlider" type="HSlider" parent="Control/VBoxContainer"]
+[node name="HSlider" type="HSlider" parent="Control/Gork Section/VBoxContainer"]
 layout_mode = 2
 max_value = 200.0
 value = 100.0
 rounded = true
+script = ExtResource("8_1rwhy")
 
-[connection signal="toggled" from="Control/VBoxContainer/Drum Loop 1 Button" to="Control/VBoxContainer/Drum Loop 1 Button/AudioStreamPlayer" method="_on_drum_loop_1_button_toggled"]
-[connection signal="toggled" from="Control/VBoxContainer/Drum Loop 1 Button" to="Control/VBoxContainer/Drum Loop 2 Button/AudioStreamPlayer" method="_on_drum_loop_1_button_toggled"]
-[connection signal="toggled" from="Control/VBoxContainer/Drum Loop 1 Button" to="Control/VBoxContainer/Drum Loop 3 Button/AudioStreamPlayer" method="_on_drum_loop_1_button_toggled"]
-[connection signal="finished" from="Control/VBoxContainer/Drum Loop 1 Button/AudioStreamPlayer" to="Control/VBoxContainer/Drum Loop 1 Button/AudioStreamPlayer" method="_on_finished"]
-[connection signal="toggled" from="Control/VBoxContainer/Drum Loop 2 Button" to="Control/VBoxContainer/Drum Loop 1 Button/AudioStreamPlayer" method="_on_drum_loop_2_button_toggled"]
-[connection signal="toggled" from="Control/VBoxContainer/Drum Loop 2 Button" to="Control/VBoxContainer/Drum Loop 2 Button/AudioStreamPlayer" method="_on_drum_loop_2_button_toggled"]
-[connection signal="toggled" from="Control/VBoxContainer/Drum Loop 2 Button" to="Control/VBoxContainer/Drum Loop 3 Button/AudioStreamPlayer" method="_on_drum_loop_2_button_toggled"]
-[connection signal="finished" from="Control/VBoxContainer/Drum Loop 2 Button/AudioStreamPlayer" to="Control/VBoxContainer/Drum Loop 2 Button/AudioStreamPlayer" method="_on_finished"]
-[connection signal="toggled" from="Control/VBoxContainer/Drum Loop 3 Button" to="Control/VBoxContainer/Drum Loop 1 Button/AudioStreamPlayer" method="_on_drum_loop_3_button_toggled"]
-[connection signal="toggled" from="Control/VBoxContainer/Drum Loop 3 Button" to="Control/VBoxContainer/Drum Loop 2 Button/AudioStreamPlayer" method="_on_drum_loop_3_button_toggled"]
-[connection signal="toggled" from="Control/VBoxContainer/Drum Loop 3 Button" to="Control/VBoxContainer/Drum Loop 3 Button/AudioStreamPlayer" method="_on_drum_loop_3_button_toggled"]
-[connection signal="finished" from="Control/VBoxContainer/Drum Loop 3 Button/AudioStreamPlayer" to="Control/VBoxContainer/Drum Loop 3 Button/AudioStreamPlayer" method="_on_finished"]
+[node name="Daisy Section" type="PanelContainer" parent="Control"]
+layout_mode = 0
+offset_top = 259.0
+offset_right = 550.0
+offset_bottom = 648.0
+
+[node name="Fxq53 Section" type="PanelContainer" parent="Control"]
+layout_mode = 0
+offset_left = 447.0
+offset_right = 1152.0
+offset_bottom = 259.0
+
+[node name="L1sa Section" type="PanelContainer" parent="Control"]
+layout_mode = 0
+offset_left = 550.0
+offset_top = 259.0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[connection signal="toggled" from="Control/Gork Section/VBoxContainer/Drum Loop 1 Button" to="Control/Gork Section/VBoxContainer/Drum Loop 1 Button/AudioStreamPlayer" method="_on_drum_loop_1_button_toggled"]
+[connection signal="toggled" from="Control/Gork Section/VBoxContainer/Drum Loop 1 Button" to="Control/Gork Section/VBoxContainer/Drum Loop 2 Button/AudioStreamPlayer" method="_on_drum_loop_1_button_toggled"]
+[connection signal="toggled" from="Control/Gork Section/VBoxContainer/Drum Loop 1 Button" to="Control/Gork Section/VBoxContainer/Drum Loop 3 Button/AudioStreamPlayer" method="_on_drum_loop_1_button_toggled"]
+[connection signal="finished" from="Control/Gork Section/VBoxContainer/Drum Loop 1 Button/AudioStreamPlayer" to="Control/Gork Section/VBoxContainer/Drum Loop 1 Button/AudioStreamPlayer" method="_on_finished"]
+[connection signal="toggled" from="Control/Gork Section/VBoxContainer/Drum Loop 2 Button" to="Control/Gork Section/VBoxContainer/Drum Loop 1 Button/AudioStreamPlayer" method="_on_drum_loop_2_button_toggled"]
+[connection signal="toggled" from="Control/Gork Section/VBoxContainer/Drum Loop 2 Button" to="Control/Gork Section/VBoxContainer/Drum Loop 2 Button/AudioStreamPlayer" method="_on_drum_loop_2_button_toggled"]
+[connection signal="toggled" from="Control/Gork Section/VBoxContainer/Drum Loop 2 Button" to="Control/Gork Section/VBoxContainer/Drum Loop 3 Button/AudioStreamPlayer" method="_on_drum_loop_2_button_toggled"]
+[connection signal="finished" from="Control/Gork Section/VBoxContainer/Drum Loop 2 Button/AudioStreamPlayer" to="Control/Gork Section/VBoxContainer/Drum Loop 2 Button/AudioStreamPlayer" method="_on_finished"]
+[connection signal="toggled" from="Control/Gork Section/VBoxContainer/Drum Loop 3 Button" to="Control/Gork Section/VBoxContainer/Drum Loop 1 Button/AudioStreamPlayer" method="_on_drum_loop_3_button_toggled"]
+[connection signal="toggled" from="Control/Gork Section/VBoxContainer/Drum Loop 3 Button" to="Control/Gork Section/VBoxContainer/Drum Loop 2 Button/AudioStreamPlayer" method="_on_drum_loop_3_button_toggled"]
+[connection signal="toggled" from="Control/Gork Section/VBoxContainer/Drum Loop 3 Button" to="Control/Gork Section/VBoxContainer/Drum Loop 3 Button/AudioStreamPlayer" method="_on_drum_loop_3_button_toggled"]
+[connection signal="finished" from="Control/Gork Section/VBoxContainer/Drum Loop 3 Button/AudioStreamPlayer" to="Control/Gork Section/VBoxContainer/Drum Loop 3 Button/AudioStreamPlayer" method="_on_finished"]
+[connection signal="value_changed" from="Control/Gork Section/VBoxContainer/HSlider" to="Control/Gork Section/VBoxContainer/Drum Loop 1 Button/AudioStreamPlayer" method="_on_h_slider_value_changed"]

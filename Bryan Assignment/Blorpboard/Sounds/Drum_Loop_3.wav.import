@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://bel1kobq64jq6"
-path="res://.godot/imported/Drum_Loop_1.wav-a78e0326f569357630a470f2022e4038.sample"
+uid="uid://caccyqwcqfnab"
+path="res://.godot/imported/Drum_Loop_3.wav-703349b194212ada92ba80733c511a10.sample"
 
 [deps]
 
-source_file="res://Drum_Loop_1.wav"
-dest_files=["res://.godot/imported/Drum_Loop_1.wav-a78e0326f569357630a470f2022e4038.sample"]
+source_file="res://Sounds/Drum_Loop_3.wav"
+dest_files=["res://.godot/imported/Drum_Loop_3.wav-703349b194212ada92ba80733c511a10.sample"]
 
 [params]
 

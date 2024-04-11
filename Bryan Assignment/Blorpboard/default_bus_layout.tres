@@ -1,4 +1,14 @@
-[gd_resource type="AudioBusLayout" format=3 uid="uid://bmehb3n7fll58"]
+[gd_resource type="AudioBusLayout" load_steps=2 format=3 uid="uid://bmehb3n7fll58"]
+
+[sub_resource type="AudioEffectPitchShift" id="AudioEffectPitchShift_r4rlu"]
+resource_name = "PitchShift"
 
 [resource]
-bus/0/send = &"Drums"
+bus/1/name = &"Gork"
+bus/1/solo = false
+bus/1/mute = false
+bus/1/bypass_fx = false
+bus/1/volume_db = 0.0
+bus/1/send = &"Master"
+bus/1/effect/0/effect = SubResource("AudioEffectPitchShift_r4rlu")
+bus/1/effect/0/enabled = true

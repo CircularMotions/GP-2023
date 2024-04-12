@@ -102,3 +102,5 @@ offset_bottom = 648.0
 [connection signal="toggled" from="Control/Gork Section/VBoxContainer/Drum Loop 3 Button" to="Control/Gork Section/VBoxContainer/Drum Loop 3 Button/AudioStreamPlayer" method="_on_drum_loop_3_button_toggled"]
 [connection signal="finished" from="Control/Gork Section/VBoxContainer/Drum Loop 3 Button/AudioStreamPlayer" to="Control/Gork Section/VBoxContainer/Drum Loop 3 Button/AudioStreamPlayer" method="_on_finished"]
 [connection signal="value_changed" from="Control/Gork Section/VBoxContainer/HSlider" to="Control/Gork Section/VBoxContainer/Drum Loop 1 Button/AudioStreamPlayer" method="_on_h_slider_value_changed"]
+[connection signal="value_changed" from="Control/Gork Section/VBoxContainer/HSlider" to="Control/Gork Section/VBoxContainer/Drum Loop 2 Button/AudioStreamPlayer" method="_on_h_slider_value_changed"]
+[connection signal="value_changed" from="Control/Gork Section/VBoxContainer/HSlider" to="Control/Gork Section/VBoxContainer/Drum Loop 3 Button/AudioStreamPlayer" method="_on_h_slider_value_changed"]

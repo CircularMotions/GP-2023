@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bbes035id5wep"]
+[gd_scene load_steps=11 format=3 uid="uid://bbes035id5wep"]
 
 [ext_resource type="Theme" uid="uid://davxw4ylwekln" path="res://Themes/Gork_theme.tres" id="1_mwcan"]
 [ext_resource type="AudioStream" uid="uid://bel1kobq64jq6" path="res://Sounds/Drum_Loop_1.wav" id="2_pqg3e"]
@@ -8,6 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://caccyqwcqfnab" path="res://Sounds/Drum_Loop_3.wav" id="6_s20bs"]
 [ext_resource type="Script" path="res://Scripts/PlayLoop3.gd" id="7_ps7pr"]
 [ext_resource type="Script" path="res://Scripts/Pitch_correction.gd" id="8_1rwhy"]
+[ext_resource type="Theme" uid="uid://bq56hbb4i51yg" path="res://Themes/Daisy_theme.tres" id="9_6ua1a"]
 
 [sub_resource type="GDScript" id="GDScript_ex8j1"]
 
@@ -23,64 +24,173 @@ size_flags_vertical = 0
 metadata/_edit_use_anchors_ = true
 
 [node name="Gork Section" type="PanelContainer" parent="Control"]
-layout_mode = 0
+layout_mode = 2
 offset_right = 447.0
 offset_bottom = 259.0
 theme = ExtResource("1_mwcan")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/Gork Section"]
+[node name="MarginContainer" type="MarginContainer" parent="Control/Gork Section"]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Gork Section/MarginContainer"]
 layout_mode = 2
 theme = ExtResource("1_mwcan")
 
-[node name="Drum Loop 1 Button" type="Button" parent="Control/Gork Section/VBoxContainer"]
+[node name="Drum Loop 1 Button" type="Button" parent="Control/Gork Section/MarginContainer/VBoxContainer"]
 layout_mode = 2
 toggle_mode = true
 text = "Drums 1"
 script = SubResource("GDScript_ex8j1")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control/Gork Section/VBoxContainer/Drum Loop 1 Button"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control/Gork Section/MarginContainer/VBoxContainer/Drum Loop 1 Button"]
 stream = ExtResource("2_pqg3e")
 bus = &"Gork"
 script = ExtResource("3_8y6u2")
 
-[node name="Drum Loop 2 Button" type="Button" parent="Control/Gork Section/VBoxContainer"]
+[node name="Drum Loop 2 Button" type="Button" parent="Control/Gork Section/MarginContainer/VBoxContainer"]
 layout_mode = 2
 toggle_mode = true
 text = "Drums 2"
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control/Gork Section/VBoxContainer/Drum Loop 2 Button"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control/Gork Section/MarginContainer/VBoxContainer/Drum Loop 2 Button"]
 stream = ExtResource("4_kc854")
 bus = &"Gork"
 script = ExtResource("5_wxqyl")
 
-[node name="Drum Loop 3 Button" type="Button" parent="Control/Gork Section/VBoxContainer"]
+[node name="Drum Loop 3 Button" type="Button" parent="Control/Gork Section/MarginContainer/VBoxContainer"]
 layout_mode = 2
 toggle_mode = true
 text = "Drums 3"
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control/Gork Section/VBoxContainer/Drum Loop 3 Button"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control/Gork Section/MarginContainer/VBoxContainer/Drum Loop 3 Button"]
 stream = ExtResource("6_s20bs")
 bus = &"Gork"
 script = ExtResource("7_ps7pr")
 
-[node name="HSlider" type="HSlider" parent="Control/Gork Section/VBoxContainer"]
+[node name="HSlider" type="HSlider" parent="Control/Gork Section/MarginContainer/VBoxContainer"]
 layout_mode = 2
 max_value = 200.0
 value = 100.0
 rounded = true
 script = ExtResource("8_1rwhy")
 
-[node name="Daisy Section" type="PanelContainer" parent="Control"]
-layout_mode = 0
-offset_top = 259.0
-offset_right = 550.0
-offset_bottom = 648.0
-
 [node name="Fxq53 Section" type="PanelContainer" parent="Control"]
 layout_mode = 0
 offset_left = 447.0
 offset_right = 1152.0
 offset_bottom = 259.0
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/Fxq53 Section"]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/Fxq53 Section/MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Fxq53 Section/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CenterContainer" type="CenterContainer" parent="Control/Fxq53 Section/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TextureButton" type="TextureButton" parent="Control/Fxq53 Section/MarginContainer/HBoxContainer/VBoxContainer/CenterContainer"]
+layout_mode = 2
+
+[node name="CenterContainer2" type="CenterContainer" parent="Control/Fxq53 Section/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TextureButton" type="TextureButton" parent="Control/Fxq53 Section/MarginContainer/HBoxContainer/VBoxContainer/CenterContainer2"]
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="Control/Fxq53 Section/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureButton" type="TextureButton" parent="Control/Fxq53 Section/MarginContainer/HBoxContainer/CenterContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Control/Fxq53 Section/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CenterContainer" type="CenterContainer" parent="Control/Fxq53 Section/MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TextureButton" type="TextureButton" parent="Control/Fxq53 Section/MarginContainer/HBoxContainer/VBoxContainer2/CenterContainer"]
+layout_mode = 2
+
+[node name="CenterContainer2" type="CenterContainer" parent="Control/Fxq53 Section/MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TextureButton" type="TextureButton" parent="Control/Fxq53 Section/MarginContainer/HBoxContainer/VBoxContainer2/CenterContainer2"]
+layout_mode = 2
+
+[node name="Daisy Section" type="PanelContainer" parent="Control"]
+layout_mode = 0
+offset_top = 259.0
+offset_right = 550.0
+offset_bottom = 648.0
+theme = ExtResource("9_6ua1a")
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/Daisy Section"]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/Daisy Section/MarginContainer"]
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="Control/Daisy Section/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureButton" type="TextureButton" parent="Control/Daisy Section/MarginContainer/HBoxContainer/CenterContainer"]
+layout_mode = 2
+
+[node name="CenterContainer2" type="CenterContainer" parent="Control/Daisy Section/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureButton" type="TextureButton" parent="Control/Daisy Section/MarginContainer/HBoxContainer/CenterContainer2"]
+layout_mode = 2
+
+[node name="CenterContainer3" type="CenterContainer" parent="Control/Daisy Section/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureButton" type="TextureButton" parent="Control/Daisy Section/MarginContainer/HBoxContainer/CenterContainer3"]
+layout_mode = 2
+
+[node name="CenterContainer4" type="CenterContainer" parent="Control/Daisy Section/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Daisy Section/MarginContainer/HBoxContainer/CenterContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HSlider" type="HSlider" parent="Control/Daisy Section/MarginContainer/HBoxContainer/CenterContainer4/VBoxContainer"]
+layout_mode = 2
+
+[node name="HSlider2" type="HSlider" parent="Control/Daisy Section/MarginContainer/HBoxContainer/CenterContainer4/VBoxContainer"]
+layout_mode = 2
+
+[node name="HSlider3" type="HSlider" parent="Control/Daisy Section/MarginContainer/HBoxContainer/CenterContainer4/VBoxContainer"]
+layout_mode = 2
 
 [node name="L1sa Section" type="PanelContainer" parent="Control"]
 layout_mode = 0
@@ -89,18 +199,74 @@ offset_top = 259.0
 offset_right = 1152.0
 offset_bottom = 648.0
 
-[connection signal="toggled" from="Control/Gork Section/VBoxContainer/Drum Loop 1 Button" to="Control/Gork Section/VBoxContainer/Drum Loop 1 Button/AudioStreamPlayer" method="_on_drum_loop_1_button_toggled"]
-[connection signal="toggled" from="Control/Gork Section/VBoxContainer/Drum Loop 1 Button" to="Control/Gork Section/VBoxContainer/Drum Loop 2 Button/AudioStreamPlayer" method="_on_drum_loop_1_button_toggled"]
-[connection signal="toggled" from="Control/Gork Section/VBoxContainer/Drum Loop 1 Button" to="Control/Gork Section/VBoxContainer/Drum Loop 3 Button/AudioStreamPlayer" method="_on_drum_loop_1_button_toggled"]
-[connection signal="finished" from="Control/Gork Section/VBoxContainer/Drum Loop 1 Button/AudioStreamPlayer" to="Control/Gork Section/VBoxContainer/Drum Loop 1 Button/AudioStreamPlayer" method="_on_finished"]
-[connection signal="toggled" from="Control/Gork Section/VBoxContainer/Drum Loop 2 Button" to="Control/Gork Section/VBoxContainer/Drum Loop 1 Button/AudioStreamPlayer" method="_on_drum_loop_2_button_toggled"]
-[connection signal="toggled" from="Control/Gork Section/VBoxContainer/Drum Loop 2 Button" to="Control/Gork Section/VBoxContainer/Drum Loop 2 Button/AudioStreamPlayer" method="_on_drum_loop_2_button_toggled"]
-[connection signal="toggled" from="Control/Gork Section/VBoxContainer/Drum Loop 2 Button" to="Control/Gork Section/VBoxContainer/Drum Loop 3 Button/AudioStreamPlayer" method="_on_drum_loop_2_button_toggled"]
-[connection signal="finished" from="Control/Gork Section/VBoxContainer/Drum Loop 2 Button/AudioStreamPlayer" to="Control/Gork Section/VBoxContainer/Drum Loop 2 Button/AudioStreamPlayer" method="_on_finished"]
-[connection signal="toggled" from="Control/Gork Section/VBoxContainer/Drum Loop 3 Button" to="Control/Gork Section/VBoxContainer/Drum Loop 1 Button/AudioStreamPlayer" method="_on_drum_loop_3_button_toggled"]
-[connection signal="toggled" from="Control/Gork Section/VBoxContainer/Drum Loop 3 Button" to="Control/Gork Section/VBoxContainer/Drum Loop 2 Button/AudioStreamPlayer" method="_on_drum_loop_3_button_toggled"]
-[connection signal="toggled" from="Control/Gork Section/VBoxContainer/Drum Loop 3 Button" to="Control/Gork Section/VBoxContainer/Drum Loop 3 Button/AudioStreamPlayer" method="_on_drum_loop_3_button_toggled"]
-[connection signal="finished" from="Control/Gork Section/VBoxContainer/Drum Loop 3 Button/AudioStreamPlayer" to="Control/Gork Section/VBoxContainer/Drum Loop 3 Button/AudioStreamPlayer" method="_on_finished"]
-[connection signal="value_changed" from="Control/Gork Section/VBoxContainer/HSlider" to="Control/Gork Section/VBoxContainer/Drum Loop 1 Button/AudioStreamPlayer" method="_on_h_slider_value_changed"]
-[connection signal="value_changed" from="Control/Gork Section/VBoxContainer/HSlider" to="Control/Gork Section/VBoxContainer/Drum Loop 2 Button/AudioStreamPlayer" method="_on_h_slider_value_changed"]
-[connection signal="value_changed" from="Control/Gork Section/VBoxContainer/HSlider" to="Control/Gork Section/VBoxContainer/Drum Loop 3 Button/AudioStreamPlayer" method="_on_h_slider_value_changed"]
+[node name="MarginContainer" type="MarginContainer" parent="Control/L1sa Section"]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/L1sa Section/MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/L1sa Section/MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="VSlider" type="VSlider" parent="Control/L1sa Section/MarginContainer/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="VSlider2" type="VSlider" parent="Control/L1sa Section/MarginContainer/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="Control/L1sa Section/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+columns = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="Control/L1sa Section/MarginContainer/HBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureButton" type="TextureButton" parent="Control/L1sa Section/MarginContainer/HBoxContainer/GridContainer/CenterContainer"]
+layout_mode = 2
+
+[node name="CenterContainer2" type="CenterContainer" parent="Control/L1sa Section/MarginContainer/HBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureButton2" type="TextureButton" parent="Control/L1sa Section/MarginContainer/HBoxContainer/GridContainer/CenterContainer2"]
+layout_mode = 2
+
+[node name="CenterContainer3" type="CenterContainer" parent="Control/L1sa Section/MarginContainer/HBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureButton3" type="TextureButton" parent="Control/L1sa Section/MarginContainer/HBoxContainer/GridContainer/CenterContainer3"]
+layout_mode = 2
+
+[node name="CenterContainer4" type="CenterContainer" parent="Control/L1sa Section/MarginContainer/HBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureButton4" type="TextureButton" parent="Control/L1sa Section/MarginContainer/HBoxContainer/GridContainer/CenterContainer4"]
+layout_mode = 2
+
+[connection signal="toggled" from="Control/Gork Section/MarginContainer/VBoxContainer/Drum Loop 1 Button" to="Control/Gork Section/MarginContainer/VBoxContainer/Drum Loop 1 Button/AudioStreamPlayer" method="_on_drum_loop_1_button_toggled"]
+[connection signal="toggled" from="Control/Gork Section/MarginContainer/VBoxContainer/Drum Loop 1 Button" to="Control/Gork Section/MarginContainer/VBoxContainer/Drum Loop 2 Button/AudioStreamPlayer" method="_on_drum_loop_1_button_toggled"]
+[connection signal="toggled" from="Control/Gork Section/MarginContainer/VBoxContainer/Drum Loop 1 Button" to="Control/Gork Section/MarginContainer/VBoxContainer/Drum Loop 3 Button/AudioStreamPlayer" method="_on_drum_loop_1_button_toggled"]
+[connection signal="finished" from="Control/Gork Section/MarginContainer/VBoxContainer/Drum Loop 1 Button/AudioStreamPlayer" to="Control/Gork Section/MarginContainer/VBoxContainer/Drum Loop 1 Button/AudioStreamPlayer" method="_on_finished"]
+[connection signal="toggled" from="Control/Gork Section/MarginContainer/VBoxContainer/Drum Loop 2 Button" to="Control/Gork Section/MarginContainer/VBoxContainer/Drum Loop 1 Button/AudioStreamPlayer" method="_on_drum_loop_2_button_toggled"]
+[connection signal="toggled" from="Control/Gork Section/MarginContainer/VBoxContainer/Drum Loop 2 Button" to="Control/Gork Section/MarginContainer/VBoxContainer/Drum Loop 2 Button/AudioStreamPlayer" method="_on_drum_loop_2_button_toggled"]
+[connection signal="toggled" from="Control/Gork Section/MarginContainer/VBoxContainer/Drum Loop 2 Button" to="Control/Gork Section/MarginContainer/VBoxContainer/Drum Loop 3 Button/AudioStreamPlayer" method="_on_drum_loop_2_button_toggled"]
+[connection signal="finished" from="Control/Gork Section/MarginContainer/VBoxContainer/Drum Loop 2 Button/AudioStreamPlayer" to="Control/Gork Section/MarginContainer/VBoxContainer/Drum Loop 2 Button/AudioStreamPlayer" method="_on_finished"]
+[connection signal="toggled" from="Control/Gork Section/MarginContainer/VBoxContainer/Drum Loop 3 Button" to="Control/Gork Section/MarginContainer/VBoxContainer/Drum Loop 1 Button/AudioStreamPlayer" method="_on_drum_loop_3_button_toggled"]
+[connection signal="toggled" from="Control/Gork Section/MarginContainer/VBoxContainer/Drum Loop 3 Button" to="Control/Gork Section/MarginContainer/VBoxContainer/Drum Loop 2 Button/AudioStreamPlayer" method="_on_drum_loop_3_button_toggled"]
+[connection signal="toggled" from="Control/Gork Section/MarginContainer/VBoxContainer/Drum Loop 3 Button" to="Control/Gork Section/MarginContainer/VBoxContainer/Drum Loop 3 Button/AudioStreamPlayer" method="_on_drum_loop_3_button_toggled"]
+[connection signal="finished" from="Control/Gork Section/MarginContainer/VBoxContainer/Drum Loop 3 Button/AudioStreamPlayer" to="Control/Gork Section/MarginContainer/VBoxContainer/Drum Loop 3 Button/AudioStreamPlayer" method="_on_finished"]
+[connection signal="value_changed" from="Control/Gork Section/MarginContainer/VBoxContainer/HSlider" to="Control/Gork Section/MarginContainer/VBoxContainer/Drum Loop 1 Button/AudioStreamPlayer" method="_on_h_slider_value_changed"]
+[connection signal="value_changed" from="Control/Gork Section/MarginContainer/VBoxContainer/HSlider" to="Control/Gork Section/MarginContainer/VBoxContainer/Drum Loop 2 Button/AudioStreamPlayer" method="_on_h_slider_value_changed"]
+[connection signal="value_changed" from="Control/Gork Section/MarginContainer/VBoxContainer/HSlider" to="Control/Gork Section/MarginContainer/VBoxContainer/Drum Loop 3 Button/AudioStreamPlayer" method="_on_h_slider_value_changed"]

@@ -1,3 +1,31 @@
-[gd_resource type="Theme" format=3 uid="uid://vpjn3agl6uus"]
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://vpjn3agl6uus"]
+
+[ext_resource type="Texture2D" uid="uid://m72nq2vpmvi3" path="res://Textures/L1sa textures/L1sa_grabber.png" id="1_nxaav"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_u3y5i"]
+color = Color(0.0823529, 0.0823529, 0.0823529, 1)
+grow_begin = -1.0
+grow_end = -5.0
+thickness = 4
+vertical = true
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_2yxi5"]
+grow_begin = -1.0
+grow_end = -5.0
+thickness = 4
+vertical = true
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_vk2yq"]
+color = Color(0.396078, 0.396078, 0.396078, 1)
+grow_begin = -1.0
+grow_end = -5.0
+thickness = 4
+vertical = true
 
 [resource]
+VSlider/icons/grabber = ExtResource("1_nxaav")
+VSlider/icons/grabber_disabled = ExtResource("1_nxaav")
+VSlider/icons/grabber_highlight = ExtResource("1_nxaav")
+VSlider/styles/grabber_area = SubResource("StyleBoxLine_u3y5i")
+VSlider/styles/grabber_area_highlight = SubResource("StyleBoxLine_2yxi5")
+VSlider/styles/slider = SubResource("StyleBoxLine_vk2yq")

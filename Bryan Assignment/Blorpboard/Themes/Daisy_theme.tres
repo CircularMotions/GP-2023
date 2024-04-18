@@ -2,6 +2,7 @@
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_om5w6"]
 color = Color(0.611765, 0, 0.619608, 1)
+thickness = 4
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_62tor"]
 bg_color = Color(0.992157, 0.494118, 0.737255, 1)

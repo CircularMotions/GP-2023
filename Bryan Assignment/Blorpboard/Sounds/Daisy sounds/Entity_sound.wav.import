@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://criai8463hoaf"
+path="res://.godot/imported/Entity_sound.wav-fd3067be578a0ef987492a46b6e9ab5c.sample"
+
+[deps]
+
+source_file="res://Sounds/Daisy sounds/Entity_sound.wav"
+dest_files=["res://.godot/imported/Entity_sound.wav-fd3067be578a0ef987492a46b6e9ab5c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

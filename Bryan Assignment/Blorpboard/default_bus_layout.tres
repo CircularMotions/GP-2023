@@ -1,7 +1,24 @@
-[gd_resource type="AudioBusLayout" load_steps=2 format=3 uid="uid://bmehb3n7fll58"]
+[gd_resource type="AudioBusLayout" load_steps=7 format=3 uid="uid://bmehb3n7fll58"]
 
 [sub_resource type="AudioEffectPitchShift" id="AudioEffectPitchShift_r4rlu"]
 resource_name = "PitchShift"
+
+[sub_resource type="AudioEffectPitchShift" id="AudioEffectPitchShift_y04aq"]
+resource_name = "PitchShift"
+
+[sub_resource type="AudioEffectDistortion" id="AudioEffectDistortion_m3psg"]
+resource_name = "Distortion"
+
+[sub_resource type="AudioEffectReverb" id="AudioEffectReverb_hst3h"]
+resource_name = "Reverb"
+room_size = 0.0
+
+[sub_resource type="AudioEffectPitchShift" id="AudioEffectPitchShift_kl55a"]
+resource_name = "PitchShift"
+
+[sub_resource type="AudioEffectReverb" id="AudioEffectReverb_gp2mi"]
+resource_name = "Reverb"
+room_size = 0.0
 
 [resource]
 bus/1/name = &"Gork"
@@ -12,3 +29,31 @@ bus/1/volume_db = 0.0
 bus/1/send = &"Master"
 bus/1/effect/0/effect = SubResource("AudioEffectPitchShift_r4rlu")
 bus/1/effect/0/enabled = true
+bus/2/name = &"Fxq53"
+bus/2/solo = false
+bus/2/mute = false
+bus/2/bypass_fx = false
+bus/2/volume_db = 0.0
+bus/2/send = &"Master"
+bus/3/name = &"Daisy"
+bus/3/solo = false
+bus/3/mute = false
+bus/3/bypass_fx = false
+bus/3/volume_db = 0.0
+bus/3/send = &"Master"
+bus/3/effect/0/effect = SubResource("AudioEffectPitchShift_y04aq")
+bus/3/effect/0/enabled = true
+bus/3/effect/1/effect = SubResource("AudioEffectDistortion_m3psg")
+bus/3/effect/1/enabled = true
+bus/3/effect/2/effect = SubResource("AudioEffectReverb_hst3h")
+bus/3/effect/2/enabled = true
+bus/4/name = &"L1sa"
+bus/4/solo = false
+bus/4/mute = false
+bus/4/bypass_fx = false
+bus/4/volume_db = 0.0
+bus/4/send = &"Master"
+bus/4/effect/0/effect = SubResource("AudioEffectPitchShift_kl55a")
+bus/4/effect/0/enabled = true
+bus/4/effect/1/effect = SubResource("AudioEffectReverb_gp2mi")
+bus/4/effect/1/enabled = true

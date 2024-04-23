@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dy82uxhau5fse"
+path="res://.godot/imported/Sploosh_sound.mp3-9f76568e6c8b7c1b79f69d8f1d985e38.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Daisy sounds/Sploosh_sound.mp3"
+dest_files=["res://.godot/imported/Sploosh_sound.mp3-9f76568e6c8b7c1b79f69d8f1d985e38.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

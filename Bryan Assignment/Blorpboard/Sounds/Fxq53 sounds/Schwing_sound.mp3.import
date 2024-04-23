@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dn2rqd8p6t782"
+path="res://.godot/imported/Schwing_sound.mp3-fdc74201f046a323ec6a211daa93adfa.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Fxq53 sounds/Schwing_sound.mp3"
+dest_files=["res://.godot/imported/Schwing_sound.mp3-fdc74201f046a323ec6a211daa93adfa.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

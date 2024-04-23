@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://bbes035id5wep"]
+[gd_scene load_steps=62 format=3 uid="uid://bbes035id5wep"]
 
 [ext_resource type="Theme" uid="uid://davxw4ylwekln" path="res://Themes/Gork_theme.tres" id="1_mwcan"]
 [ext_resource type="AudioStream" uid="uid://bel1kobq64jq6" path="res://Sounds/Gork sounds/Drum_Loop_1.wav" id="2_pqg3e"]
@@ -15,24 +15,51 @@
 [ext_resource type="Texture2D" uid="uid://dosgfpawrcda3" path="res://Textures/Fxq13 textures/Cybersigil_button.png" id="10_g4qkq"]
 [ext_resource type="Texture2D" uid="uid://6x0f3rut7k1q" path="res://Textures/Daisy textures/Daisy_button_1.png" id="10_g50e1"]
 [ext_resource type="Texture2D" uid="uid://boqp86hidsl1v" path="res://Textures/Fxq13 textures/Guy_button.png" id="10_lk7pq"]
+[ext_resource type="AudioStream" uid="uid://cdpry5p1dh38w" path="res://Sounds/Fxq53 sounds/Cat_sound.mp3" id="10_qeaav"]
+[ext_resource type="Script" path="res://Play_cat.gd" id="11_aacar"]
 [ext_resource type="Texture2D" uid="uid://dfodwmvtggvix" path="res://Textures/Daisy textures/Daisy_button_2.png" id="11_rkhr5"]
 [ext_resource type="Texture2D" uid="uid://bn6wtrvf6rrbi" path="res://Textures/Daisy textures/Daisy_button_3.png" id="12_jo6c6"]
+[ext_resource type="AudioStream" uid="uid://bka6hi0er8df2" path="res://Sounds/Fxq53 sounds/Digital_denizen_sound.mp3" id="13_2pt2a"]
 [ext_resource type="Texture2D" uid="uid://cd4l8dinl15yh" path="res://Textures/Daisy textures/Heart_grabber.png" id="13_04ien"]
 [ext_resource type="Texture2D" uid="uid://ddbwqj5e8nxq6" path="res://Textures/Daisy textures/Scratchmark_grabber.png" id="14_01m73"]
+[ext_resource type="Script" path="res://Play_digital_denizen.gd" id="14_2ukem"]
+[ext_resource type="AudioStream" uid="uid://dn2rqd8p6t782" path="res://Sounds/Fxq53 sounds/Schwing_sound.mp3" id="15_85div"]
 [ext_resource type="Texture2D" uid="uid://da3wgh6dwp7ix" path="res://Textures/Daisy textures/Eye_grabber.png" id="15_c43d1"]
 [ext_resource type="Theme" uid="uid://vpjn3agl6uus" path="res://Themes/L1sa_theme.tres" id="16_da0m8"]
+[ext_resource type="Script" path="res://Play_schwing.gd" id="17_ifvot"]
+[ext_resource type="AudioStream" uid="uid://cj2gun1yy7h6u" path="res://Sounds/Fxq53 sounds/Beep_sound.mp3" id="17_kotu8"]
+[ext_resource type="AudioStream" uid="uid://cx6npt22xlkms" path="res://Sounds/Fxq53 sounds/Trumpet_sound.mp3" id="19_027jb"]
+[ext_resource type="Script" path="res://Play_beep.gd" id="20_nynom"]
 [ext_resource type="Texture2D" uid="uid://sk4v8na0g4er" path="res://Textures/L1sa textures/Star_button_1.png" id="22_7v7gx"]
+[ext_resource type="AudioStream" uid="uid://criai8463hoaf" path="res://Sounds/Daisy sounds/Entity_sound.wav" id="22_ybbig"]
 [ext_resource type="Texture2D" uid="uid://dt4j3gudat3ox" path="res://Textures/L1sa textures/Star_button_2.png" id="23_gamlj"]
+[ext_resource type="Script" path="res://Play_trumpet.gd" id="23_p4lx5"]
+[ext_resource type="AudioStream" uid="uid://dy82uxhau5fse" path="res://Sounds/Daisy sounds/Sploosh_sound.mp3" id="24_267mm"]
 [ext_resource type="Texture2D" uid="uid://dy3ayf10pdo1h" path="res://Textures/L1sa textures/Star_button_3.png" id="24_quhyj"]
 [ext_resource type="Texture2D" uid="uid://b4j5fv7nrdf2p" path="res://Textures/L1sa textures/Star_button_4.png" id="25_pg013"]
+[ext_resource type="AudioStream" uid="uid://djh527gc8og8h" path="res://Sounds/Daisy sounds/Evil_sound.wav" id="26_86lk7"]
+[ext_resource type="Script" path="res://Play_entity.gd" id="27_ul1ah"]
+[ext_resource type="Script" path="res://Play_sploosh.gd" id="30_qiw64"]
+[ext_resource type="AudioStream" uid="uid://bs55ygd08wxv6" path="res://Sounds/L1sa sounds/Piano_loop.wav" id="32_wppn4"]
+[ext_resource type="Script" path="res://Play_evil.gd" id="33_tnupi"]
+[ext_resource type="AudioStream" uid="uid://dlgheqx1qwff0" path="res://Sounds/L1sa sounds/Etheral_loop.wav" id="34_pfq6b"]
+[ext_resource type="Script" path="res://Daisy_pitch.gd" id="35_0p0pa"]
+[ext_resource type="AudioStream" uid="uid://vmo24ymhl7q3" path="res://Sounds/L1sa sounds/Synth_loop.wav" id="36_33dv7"]
+[ext_resource type="Script" path="res://Daisy_distortion.gd" id="37_p4yy7"]
+[ext_resource type="AudioStream" uid="uid://bc8x0f5gslctw" path="res://Sounds/L1sa sounds/Choir_loop.wav" id="38_32yii"]
+[ext_resource type="Script" path="res://Daisy_reverb.gd" id="39_hfl08"]
+[ext_resource type="Script" path="res://L1sa_pitch.gd" id="41_anaq8"]
+[ext_resource type="Script" path="res://L1sa_reverb.gd" id="42_hwd81"]
+[ext_resource type="Script" path="res://L1sa_loop_1.gd" id="45_mvajw"]
+[ext_resource type="Script" path="res://L1sa_loop_2.gd" id="48_eshm4"]
+[ext_resource type="Script" path="res://L1sa_loop_3.gd" id="51_42bxa"]
+[ext_resource type="Script" path="res://L1sa_loop_4.gd" id="54_5hecc"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fb60q"]
 bg_color = Color(0.0980392, 0.0980392, 0.0980392, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xk68c"]
 bg_color = Color(0.145098, 0.145098, 0.145098, 1)
-
-[sub_resource type="GDScript" id="GDScript_ex8j1"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6x31q"]
 bg_color = Color(0.25098, 0.705882, 0.352941, 1)
@@ -87,7 +114,6 @@ layout_mode = 2
 theme = ExtResource("1_mwcan")
 toggle_mode = true
 text = "Drums 1"
-script = SubResource("GDScript_ex8j1")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control/Gork Section/MarginContainer/VBoxContainer/Drum Loop 1 Button"]
 stream = ExtResource("2_pqg3e")
@@ -119,6 +145,7 @@ script = ExtResource("7_ps7pr")
 [node name="HSlider" type="HSlider" parent="Control/Gork Section/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("1_mwcan")
+min_value = 1.0
 max_value = 200.0
 value = 100.0
 rounded = true
@@ -159,6 +186,11 @@ texture_normal = ExtResource("9_d8cug")
 texture_pressed = ExtResource("9_d8cug")
 texture_hover = ExtResource("9_d8cug")
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control/Fxq53 Section/MarginContainer/HBoxContainer/VBoxContainer/CenterContainer/TextureButton"]
+stream = ExtResource("10_qeaav")
+bus = &"Fxq53"
+script = ExtResource("11_aacar")
+
 [node name="CenterContainer2" type="CenterContainer" parent="Control/Fxq53 Section/MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
@@ -169,6 +201,11 @@ texture_normal = ExtResource("10_lk7pq")
 texture_pressed = ExtResource("10_lk7pq")
 texture_hover = ExtResource("10_lk7pq")
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control/Fxq53 Section/MarginContainer/HBoxContainer/VBoxContainer/CenterContainer2/TextureButton"]
+stream = ExtResource("13_2pt2a")
+bus = &"Fxq53"
+script = ExtResource("14_2ukem")
+
 [node name="CenterContainer" type="CenterContainer" parent="Control/Fxq53 Section/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -178,6 +215,11 @@ layout_mode = 2
 texture_normal = ExtResource("9_77q52")
 texture_pressed = ExtResource("9_77q52")
 texture_hover = ExtResource("9_77q52")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control/Fxq53 Section/MarginContainer/HBoxContainer/CenterContainer/TextureButton"]
+stream = ExtResource("15_85div")
+bus = &"Fxq53"
+script = ExtResource("17_ifvot")
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="Control/Fxq53 Section/MarginContainer/HBoxContainer"]
 layout_mode = 2
@@ -193,6 +235,11 @@ texture_normal = ExtResource("10_g4qkq")
 texture_pressed = ExtResource("10_g4qkq")
 texture_hover = ExtResource("10_g4qkq")
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control/Fxq53 Section/MarginContainer/HBoxContainer/VBoxContainer2/CenterContainer/TextureButton"]
+stream = ExtResource("17_kotu8")
+bus = &"Fxq53"
+script = ExtResource("20_nynom")
+
 [node name="CenterContainer2" type="CenterContainer" parent="Control/Fxq53 Section/MarginContainer/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
 size_flags_vertical = 3
@@ -203,6 +250,11 @@ texture_normal = ExtResource("9_fnolq")
 texture_pressed = ExtResource("9_fnolq")
 texture_hover = ExtResource("9_fnolq")
 flip_h = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control/Fxq53 Section/MarginContainer/HBoxContainer/VBoxContainer2/CenterContainer2/TextureButton"]
+stream = ExtResource("19_027jb")
+bus = &"Fxq53"
+script = ExtResource("23_p4lx5")
 
 [node name="Daisy Section" type="PanelContainer" parent="Control"]
 layout_mode = 0
@@ -236,6 +288,11 @@ texture_normal = ExtResource("10_g50e1")
 texture_pressed = ExtResource("10_g50e1")
 texture_hover = ExtResource("10_g50e1")
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control/Daisy Section/MarginContainer/HBoxContainer/CenterContainer/TextureButton"]
+stream = ExtResource("22_ybbig")
+bus = &"Daisy"
+script = ExtResource("27_ul1ah")
+
 [node name="CenterContainer2" type="CenterContainer" parent="Control/Daisy Section/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -246,6 +303,11 @@ texture_normal = ExtResource("11_rkhr5")
 texture_pressed = ExtResource("11_rkhr5")
 texture_hover = ExtResource("11_rkhr5")
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control/Daisy Section/MarginContainer/HBoxContainer/CenterContainer2/TextureButton"]
+stream = ExtResource("24_267mm")
+bus = &"Daisy"
+script = ExtResource("30_qiw64")
+
 [node name="CenterContainer3" type="CenterContainer" parent="Control/Daisy Section/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -255,6 +317,11 @@ layout_mode = 2
 texture_normal = ExtResource("12_jo6c6")
 texture_pressed = ExtResource("12_jo6c6")
 texture_hover = ExtResource("12_jo6c6")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control/Daisy Section/MarginContainer/HBoxContainer/CenterContainer3/TextureButton"]
+stream = ExtResource("26_86lk7")
+bus = &"Daisy"
+script = ExtResource("33_tnupi")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control/Daisy Section/MarginContainer/HBoxContainer"]
 layout_mode = 2
@@ -269,6 +336,10 @@ theme_override_constants/grabber_offset = -3
 theme_override_icons/grabber = ExtResource("13_04ien")
 theme_override_icons/grabber_highlight = ExtResource("13_04ien")
 theme_override_icons/grabber_disabled = ExtResource("13_04ien")
+min_value = 1.0
+max_value = 16.0
+value = 1.0
+script = ExtResource("35_0p0pa")
 
 [node name="HSlider2" type="HSlider" parent="Control/Daisy Section/MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
@@ -276,6 +347,8 @@ theme = ExtResource("9_6ua1a")
 theme_override_icons/grabber = ExtResource("14_01m73")
 theme_override_icons/grabber_highlight = ExtResource("14_01m73")
 theme_override_icons/grabber_disabled = ExtResource("14_01m73")
+max_value = 60.0
+script = ExtResource("37_p4yy7")
 
 [node name="HSlider3" type="HSlider" parent="Control/Daisy Section/MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
@@ -283,6 +356,9 @@ theme = ExtResource("9_6ua1a")
 theme_override_icons/grabber = ExtResource("15_c43d1")
 theme_override_icons/grabber_highlight = ExtResource("15_c43d1")
 theme_override_icons/grabber_disabled = ExtResource("15_c43d1")
+max_value = 1.0
+step = 0.01
+script = ExtResource("39_hfl08")
 
 [node name="L1sa Section" type="PanelContainer" parent="Control"]
 layout_mode = 0
@@ -315,10 +391,17 @@ alignment = 1
 [node name="VSlider" type="VSlider" parent="Control/L1sa Section/MarginContainer/HBoxContainer/HBoxContainer"]
 layout_mode = 2
 theme = ExtResource("16_da0m8")
+min_value = 1.0
+max_value = 200.0
+value = 100.0
+script = ExtResource("41_anaq8")
 
 [node name="VSlider2" type="VSlider" parent="Control/L1sa Section/MarginContainer/HBoxContainer/HBoxContainer"]
 layout_mode = 2
 theme = ExtResource("16_da0m8")
+max_value = 1.0
+step = 0.01
+script = ExtResource("42_hwd81")
 
 [node name="GridContainer" type="GridContainer" parent="Control/L1sa Section/MarginContainer/HBoxContainer"]
 layout_mode = 2
@@ -333,9 +416,15 @@ size_flags_vertical = 3
 
 [node name="TextureButton" type="TextureButton" parent="Control/L1sa Section/MarginContainer/HBoxContainer/GridContainer/CenterContainer"]
 layout_mode = 2
+toggle_mode = true
 texture_normal = ExtResource("22_7v7gx")
 texture_pressed = ExtResource("22_7v7gx")
 texture_hover = ExtResource("22_7v7gx")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control/L1sa Section/MarginContainer/HBoxContainer/GridContainer/CenterContainer/TextureButton"]
+stream = ExtResource("32_wppn4")
+bus = &"L1sa"
+script = ExtResource("45_mvajw")
 
 [node name="CenterContainer2" type="CenterContainer" parent="Control/L1sa Section/MarginContainer/HBoxContainer/GridContainer"]
 layout_mode = 2
@@ -344,9 +433,15 @@ size_flags_vertical = 3
 
 [node name="TextureButton2" type="TextureButton" parent="Control/L1sa Section/MarginContainer/HBoxContainer/GridContainer/CenterContainer2"]
 layout_mode = 2
+toggle_mode = true
 texture_normal = ExtResource("23_gamlj")
 texture_pressed = ExtResource("23_gamlj")
 texture_hover = ExtResource("23_gamlj")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control/L1sa Section/MarginContainer/HBoxContainer/GridContainer/CenterContainer2/TextureButton2"]
+stream = ExtResource("34_pfq6b")
+bus = &"L1sa"
+script = ExtResource("48_eshm4")
 
 [node name="CenterContainer3" type="CenterContainer" parent="Control/L1sa Section/MarginContainer/HBoxContainer/GridContainer"]
 layout_mode = 2
@@ -355,9 +450,15 @@ size_flags_vertical = 3
 
 [node name="TextureButton3" type="TextureButton" parent="Control/L1sa Section/MarginContainer/HBoxContainer/GridContainer/CenterContainer3"]
 layout_mode = 2
+toggle_mode = true
 texture_normal = ExtResource("24_quhyj")
 texture_pressed = ExtResource("24_quhyj")
 texture_hover = ExtResource("24_quhyj")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control/L1sa Section/MarginContainer/HBoxContainer/GridContainer/CenterContainer3/TextureButton3"]
+stream = ExtResource("36_33dv7")
+bus = &"L1sa"
+script = ExtResource("51_42bxa")
 
 [node name="CenterContainer4" type="CenterContainer" parent="Control/L1sa Section/MarginContainer/HBoxContainer/GridContainer"]
 layout_mode = 2
@@ -366,9 +467,15 @@ size_flags_vertical = 3
 
 [node name="TextureButton4" type="TextureButton" parent="Control/L1sa Section/MarginContainer/HBoxContainer/GridContainer/CenterContainer4"]
 layout_mode = 2
+toggle_mode = true
 texture_normal = ExtResource("25_pg013")
 texture_pressed = ExtResource("25_pg013")
 texture_hover = ExtResource("25_pg013")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control/L1sa Section/MarginContainer/HBoxContainer/GridContainer/CenterContainer4/TextureButton4"]
+stream = ExtResource("38_32yii")
+bus = &"L1sa"
+script = ExtResource("54_5hecc")
 
 [connection signal="toggled" from="Control/Gork Section/MarginContainer/VBoxContainer/Drum Loop 1 Button" to="Control/Gork Section/MarginContainer/VBoxContainer/Drum Loop 1 Button/AudioStreamPlayer" method="_on_drum_loop_1_button_toggled"]
 [connection signal="toggled" from="Control/Gork Section/MarginContainer/VBoxContainer/Drum Loop 1 Button" to="Control/Gork Section/MarginContainer/VBoxContainer/Drum Loop 2 Button/AudioStreamPlayer" method="_on_drum_loop_1_button_toggled"]
@@ -385,3 +492,41 @@ texture_hover = ExtResource("25_pg013")
 [connection signal="value_changed" from="Control/Gork Section/MarginContainer/VBoxContainer/HSlider" to="Control/Gork Section/MarginContainer/VBoxContainer/Drum Loop 1 Button/AudioStreamPlayer" method="_on_h_slider_value_changed"]
 [connection signal="value_changed" from="Control/Gork Section/MarginContainer/VBoxContainer/HSlider" to="Control/Gork Section/MarginContainer/VBoxContainer/Drum Loop 2 Button/AudioStreamPlayer" method="_on_h_slider_value_changed"]
 [connection signal="value_changed" from="Control/Gork Section/MarginContainer/VBoxContainer/HSlider" to="Control/Gork Section/MarginContainer/VBoxContainer/Drum Loop 3 Button/AudioStreamPlayer" method="_on_h_slider_value_changed"]
+[connection signal="button_down" from="Control/Fxq53 Section/MarginContainer/HBoxContainer/VBoxContainer/CenterContainer/TextureButton" to="Control/Fxq53 Section/MarginContainer/HBoxContainer/VBoxContainer/CenterContainer/TextureButton/AudioStreamPlayer" method="_on_texture_button_button_down"]
+[connection signal="button_down" from="Control/Fxq53 Section/MarginContainer/HBoxContainer/VBoxContainer/CenterContainer2/TextureButton" to="Control/Fxq53 Section/MarginContainer/HBoxContainer/VBoxContainer/CenterContainer2/TextureButton/AudioStreamPlayer" method="_on_texture_button_button_down"]
+[connection signal="button_down" from="Control/Fxq53 Section/MarginContainer/HBoxContainer/CenterContainer/TextureButton" to="Control/Fxq53 Section/MarginContainer/HBoxContainer/CenterContainer/TextureButton/AudioStreamPlayer" method="_on_texture_button_button_down"]
+[connection signal="button_down" from="Control/Fxq53 Section/MarginContainer/HBoxContainer/VBoxContainer2/CenterContainer/TextureButton" to="Control/Fxq53 Section/MarginContainer/HBoxContainer/VBoxContainer2/CenterContainer/TextureButton/AudioStreamPlayer" method="_on_texture_button_button_down"]
+[connection signal="button_down" from="Control/Fxq53 Section/MarginContainer/HBoxContainer/VBoxContainer2/CenterContainer2/TextureButton" to="Control/Fxq53 Section/MarginContainer/HBoxContainer/VBoxContainer2/CenterContainer2/TextureButton/AudioStreamPlayer" method="_on_texture_button_button_down"]
+[connection signal="button_down" from="Control/Daisy Section/MarginContainer/HBoxContainer/CenterContainer/TextureButton" to="Control/Daisy Section/MarginContainer/HBoxContainer/CenterContainer/TextureButton/AudioStreamPlayer" method="_on_texture_button_button_down"]
+[connection signal="button_down" from="Control/Daisy Section/MarginContainer/HBoxContainer/CenterContainer2/TextureButton" to="Control/Daisy Section/MarginContainer/HBoxContainer/CenterContainer2/TextureButton/AudioStreamPlayer" method="_on_texture_button_button_down"]
+[connection signal="button_down" from="Control/Daisy Section/MarginContainer/HBoxContainer/CenterContainer3/TextureButton" to="Control/Daisy Section/MarginContainer/HBoxContainer/CenterContainer3/TextureButton/AudioStreamPlayer" method="_on_texture_button_button_down"]
+[connection signal="value_changed" from="Control/Daisy Section/MarginContainer/HBoxContainer/VBoxContainer/HSlider" to="Control/Daisy Section/MarginContainer/HBoxContainer/CenterContainer/TextureButton/AudioStreamPlayer" method="_on_h_slider_value_changed"]
+[connection signal="value_changed" from="Control/Daisy Section/MarginContainer/HBoxContainer/VBoxContainer/HSlider" to="Control/Daisy Section/MarginContainer/HBoxContainer/CenterContainer2/TextureButton/AudioStreamPlayer" method="_on_h_slider_value_changed"]
+[connection signal="value_changed" from="Control/Daisy Section/MarginContainer/HBoxContainer/VBoxContainer/HSlider" to="Control/Daisy Section/MarginContainer/HBoxContainer/CenterContainer3/TextureButton/AudioStreamPlayer" method="_on_h_slider_value_changed"]
+[connection signal="value_changed" from="Control/Daisy Section/MarginContainer/HBoxContainer/VBoxContainer/HSlider2" to="Control/Daisy Section/MarginContainer/HBoxContainer/VBoxContainer/HSlider2" method="_on_value_changed"]
+[connection signal="value_changed" from="Control/Daisy Section/MarginContainer/HBoxContainer/VBoxContainer/HSlider3" to="Control/Daisy Section/MarginContainer/HBoxContainer/VBoxContainer/HSlider3" method="_on_value_changed"]
+[connection signal="value_changed" from="Control/L1sa Section/MarginContainer/HBoxContainer/HBoxContainer/VSlider" to="Control/L1sa Section/MarginContainer/HBoxContainer/GridContainer/CenterContainer/TextureButton/AudioStreamPlayer" method="_on_v_slider_value_changed"]
+[connection signal="value_changed" from="Control/L1sa Section/MarginContainer/HBoxContainer/HBoxContainer/VSlider" to="Control/L1sa Section/MarginContainer/HBoxContainer/GridContainer/CenterContainer2/TextureButton2/AudioStreamPlayer" method="_on_v_slider_value_changed"]
+[connection signal="value_changed" from="Control/L1sa Section/MarginContainer/HBoxContainer/HBoxContainer/VSlider" to="Control/L1sa Section/MarginContainer/HBoxContainer/GridContainer/CenterContainer3/TextureButton3/AudioStreamPlayer" method="_on_v_slider_value_changed"]
+[connection signal="value_changed" from="Control/L1sa Section/MarginContainer/HBoxContainer/HBoxContainer/VSlider" to="Control/L1sa Section/MarginContainer/HBoxContainer/GridContainer/CenterContainer4/TextureButton4/AudioStreamPlayer" method="_on_v_slider_value_changed"]
+[connection signal="value_changed" from="Control/L1sa Section/MarginContainer/HBoxContainer/HBoxContainer/VSlider2" to="Control/L1sa Section/MarginContainer/HBoxContainer/HBoxContainer/VSlider2" method="_on_value_changed"]
+[connection signal="toggled" from="Control/L1sa Section/MarginContainer/HBoxContainer/GridContainer/CenterContainer/TextureButton" to="Control/L1sa Section/MarginContainer/HBoxContainer/GridContainer/CenterContainer/TextureButton/AudioStreamPlayer" method="_on_texture_button_toggled"]
+[connection signal="toggled" from="Control/L1sa Section/MarginContainer/HBoxContainer/GridContainer/CenterContainer/TextureButton" to="Control/L1sa Section/MarginContainer/HBoxContainer/GridContainer/CenterContainer2/TextureButton2/AudioStreamPlayer" method="_on_texture_button_toggled"]
+[connection signal="toggled" from="Control/L1sa Section/MarginContainer/HBoxContainer/GridContainer/CenterContainer/TextureButton" to="Control/L1sa Section/MarginContainer/HBoxContainer/GridContainer/CenterContainer3/TextureButton3/AudioStreamPlayer" method="_on_texture_button_toggled"]
+[connection signal="toggled" from="Control/L1sa Section/MarginContainer/HBoxContainer/GridContainer/CenterContainer/TextureButton" to="Control/L1sa Section/MarginContainer/HBoxContainer/GridContainer/CenterContainer4/TextureButton4/AudioStreamPlayer" method="_on_texture_button_toggled"]
+[connection signal="finished" from="Control/L1sa Section/MarginContainer/HBoxContainer/GridContainer/CenterContainer/TextureButton/AudioStreamPlayer" to="Control/L1sa Section/MarginContainer/HBoxContainer/GridContainer/CenterContainer/TextureButton/AudioStreamPlayer" method="_on_finished"]
+[connection signal="toggled" from="Control/L1sa Section/MarginContainer/HBoxContainer/GridContainer/CenterContainer2/TextureButton2" to="Control/L1sa Section/MarginContainer/HBoxContainer/GridContainer/CenterContainer/TextureButton/AudioStreamPlayer" method="_on_texture_button_2_toggled"]
+[connection signal="toggled" from="Control/L1sa Section/MarginContainer/HBoxContainer/GridContainer/CenterContainer2/TextureButton2" to="Control/L1sa Section/MarginContainer/HBoxContainer/GridContainer/CenterContainer2/TextureButton2/AudioStreamPlayer" method="_on_texture_button_2_toggled"]
+[connection signal="toggled" from="Control/L1sa Section/MarginContainer/HBoxContainer/GridContainer/CenterContainer2/TextureButton2" to="Control/L1sa Section/MarginContainer/HBoxContainer/GridContainer/CenterContainer3/TextureButton3/AudioStreamPlayer" method="_on_texture_button_2_toggled"]
+[connection signal="toggled" from="Control/L1sa Section/MarginContainer/HBoxContainer/GridContainer/CenterContainer2/TextureButton2" to="Control/L1sa Section/MarginContainer/HBoxContainer/GridContainer/CenterContainer4/TextureButton4/AudioStreamPlayer" method="_on_texture_button_2_toggled"]
+[connection signal="finished" from="Control/L1sa Section/MarginContainer/HBoxContainer/GridContainer/CenterContainer2/TextureButton2/AudioStreamPlayer" to="Control/L1sa Section/MarginContainer/HBoxContainer/GridContainer/CenterContainer2/TextureButton2/AudioStreamPlayer" method="_on_finished"]
+[connection signal="toggled" from="Control/L1sa Section/MarginContainer/HBoxContainer/GridContainer/CenterContainer3/TextureButton3" to="Control/L1sa Section/MarginContainer/HBoxContainer/GridContainer/CenterContainer/TextureButton/AudioStreamPlayer" method="_on_texture_button_3_toggled"]
+[connection signal="toggled" from="Control/L1sa Section/MarginContainer/HBoxContainer/GridContainer/CenterContainer3/TextureButton3" to="Control/L1sa Section/MarginContainer/HBoxContainer/GridContainer/CenterContainer2/TextureButton2/AudioStreamPlayer" method="_on_texture_button_3_toggled"]
+[connection signal="toggled" from="Control/L1sa Section/MarginContainer/HBoxContainer/GridContainer/CenterContainer3/TextureButton3" to="Control/L1sa Section/MarginContainer/HBoxContainer/GridContainer/CenterContainer3/TextureButton3/AudioStreamPlayer" method="_on_texture_button_3_toggled"]
+[connection signal="toggled" from="Control/L1sa Section/MarginContainer/HBoxContainer/GridContainer/CenterContainer3/TextureButton3" to="Control/L1sa Section/MarginContainer/HBoxContainer/GridContainer/CenterContainer4/TextureButton4/AudioStreamPlayer" method="_on_texture_button_3_toggled"]
+[connection signal="finished" from="Control/L1sa Section/MarginContainer/HBoxContainer/GridContainer/CenterContainer3/TextureButton3/AudioStreamPlayer" to="Control/L1sa Section/MarginContainer/HBoxContainer/GridContainer/CenterContainer3/TextureButton3/AudioStreamPlayer" method="_on_finished"]
+[connection signal="toggled" from="Control/L1sa Section/MarginContainer/HBoxContainer/GridContainer/CenterContainer4/TextureButton4" to="Control/L1sa Section/MarginContainer/HBoxContainer/GridContainer/CenterContainer/TextureButton/AudioStreamPlayer" method="_on_texture_button_4_toggled"]
+[connection signal="toggled" from="Control/L1sa Section/MarginContainer/HBoxContainer/GridContainer/CenterContainer4/TextureButton4" to="Control/L1sa Section/MarginContainer/HBoxContainer/GridContainer/CenterContainer2/TextureButton2/AudioStreamPlayer" method="_on_texture_button_4_toggled"]
+[connection signal="toggled" from="Control/L1sa Section/MarginContainer/HBoxContainer/GridContainer/CenterContainer4/TextureButton4" to="Control/L1sa Section/MarginContainer/HBoxContainer/GridContainer/CenterContainer3/TextureButton3/AudioStreamPlayer" method="_on_texture_button_4_toggled"]
+[connection signal="toggled" from="Control/L1sa Section/MarginContainer/HBoxContainer/GridContainer/CenterContainer4/TextureButton4" to="Control/L1sa Section/MarginContainer/HBoxContainer/GridContainer/CenterContainer4/TextureButton4/AudioStreamPlayer" method="_on_texture_button_4_toggled"]
+[connection signal="finished" from="Control/L1sa Section/MarginContainer/HBoxContainer/GridContainer/CenterContainer4/TextureButton4/AudioStreamPlayer" to="Control/L1sa Section/MarginContainer/HBoxContainer/GridContainer/CenterContainer4/TextureButton4/AudioStreamPlayer" method="_on_finished"]
